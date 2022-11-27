@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+class one
+{
+   private:
+  int a=5;
+  friend class two;
+};
+
+class two
+{ 
+   public:
+    void fun()
+    { 
+    one obj;
+    cout<<obj.a;
+    }
+};
+int main()
+{
+    two obj;
+    obj.fun();
+    return 0;
+}
